@@ -1,0 +1,24 @@
+### AC ###
+peso = float(input("Ingresa el peso en kg: "))
+talla = float(input("Ingresa la talla en cm: "))
+
+# Calcula la superficie corporal:
+sc = 0.007184 * (peso ** 0.425) * (talla ** 0.725)
+
+# Cálculo de dosis:
+doxorrubicina_dosis = sc * 60
+ciclofosfamida_dosis = sc * 600
+
+# Resultados:
+print(f"Superficie corporal: {sc:.2f} m²")
+# PREMEDICACION
+print ("Premedicación")
+print ("Aqinzio (netupitant/palonosetron 0.5/300 mg VO previo a quimioterapia)")
+print ("Dexametasona 8 mg en 100 cc ss 0.9% pp IV en 10 min")
+print ("Cloropiramina 20 mg en 100 cc ss 0.9% pp IV en 10 min")
+
+# QUIMIOTERAPIA
+print ("Quimioterapia")
+print(f"Doxorrubicina: {doxorrubicina_dosis:.2f} mg en 100 cc ss 0.9% pp IV en 20 minutos ")
+print(f"Ciclofosfamida: {ciclofosfamida_dosis:.2f} mg en 500 cc ss 0.9% pp IV en 60 minutos")
+print ("Filgrastim 300 mcg sc cada 24 horas por 5 dias, D2,3,4,5,6")
